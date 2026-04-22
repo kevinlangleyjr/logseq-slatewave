@@ -1,0 +1,37 @@
+{
+  "name": "logseq-slatewave",
+  "version": "0.1.0",
+  "description": "Dark slate + teal theme for Logseq, sharing its palette with the Slatewave VSCode, Obsidian, and oh-my-posh themes.",
+  "main": "slatewave.css",
+  "author": "Kevin Langley Jr",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinlangleyjr/logseq-slatewave.git"
+  },
+  "homepage": "https://getslatewave.com",
+  "bugs": {
+    "url": "https://github.com/kevinlangleyjr/logseq-slatewave/issues"
+  },
+  "keywords": [
+    "logseq",
+    "theme",
+    "dark",
+    "slate",
+    "teal",
+    "slatewave"
+  ],
+  "logseq": {
+    "id": "logseq-slatewave",
+    "title": "Slatewave",
+    "icon": "./assets/icon.png",
+    "themes": [
+      {
+        "name": "Slatewave Dark",
+        "description": "Dark slate foundation with a teal signature.",
+        "mode": "dark",
+        "url": "./slatewave.css"
+      }
+    ]
+  }
+}

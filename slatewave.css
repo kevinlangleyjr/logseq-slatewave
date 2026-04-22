@@ -1,0 +1,449 @@
+/* =============================================================
+ * Slatewave — Dark
+ * Dark slate + teal theme for Logseq.
+ * Palette shared with the Slatewave VSCode, Obsidian,
+ * and oh-my-posh themes. License: WTFPL v2 — see LICENSE.
+ * ============================================================= */
+
+:root {
+  /* ---------- Palette anchors ---------- */
+  --sw-bg-0: #282c34;   /* editor canvas */
+  --sw-bg-1: #21252b;   /* sidebar, tabs */
+  --sw-bg-2: #1e293b;   /* status bar, modals, code */
+  --sw-bg-3: #334155;   /* borders, dividers */
+  --sw-bg-4: #475569;   /* hover borders */
+
+  --sw-fg-0: #f1f5f9;   /* title / bold */
+  --sw-fg-1: #e2e8f0;   /* body */
+  --sw-fg-2: #cbd5e1;   /* secondary */
+  --sw-fg-3: #94a3b8;   /* muted */
+  --sw-fg-4: #64748b;   /* faint */
+
+  --sw-teal-1: #5eead4; /* primary accent */
+  --sw-teal-2: #99f6e4; /* hover accent */
+  --sw-teal-3: #7dd3fc; /* sky-300 */
+  --sw-sky:    #38bdf8; /* external links, keywords */
+  --sw-purple: #b388ff; /* h6, decorators */
+  --sw-pink:   #fb7185; /* bullets, unresolved, errors */
+  --sw-amber:  #fbbf24; /* warnings, highlights */
+  --sw-green:  #5eead4;
+
+  /* ---------- Shape tokens ---------- */
+  --ls-font-family: 'Inter', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ls-border-radius-low: 4px;
+  --ls-border-radius-medium: 6px;
+  --ls-scrollbar-width: 8px;
+
+  /* ---------- Logseq surface tokens ---------- */
+  --ls-primary-background-color: var(--sw-bg-0);
+  --ls-secondary-background-color: var(--sw-bg-1);
+  --ls-tertiary-background-color: var(--sw-bg-2);
+  --ls-quaternary-background-color: var(--sw-bg-3);
+
+  --ls-right-sidebar-background-color: var(--sw-bg-1);
+  --ls-right-sidebar-code-bg-color: var(--sw-bg-2);
+  --ls-search-background-color: var(--sw-bg-2);
+  --ls-search-icon-color: var(--sw-fg-3);
+  --ls-page-properties-background-color: var(--sw-bg-1);
+  --ls-table-tr-even-background-color: rgba(94, 234, 212, 0.04);
+
+  /* ---------- Text ---------- */
+  --ls-primary-text-color: var(--sw-fg-1);
+  --ls-secondary-text-color: var(--sw-fg-2);
+  --ls-title-text-color: var(--sw-fg-0);
+  --ls-head-text-color: var(--sw-teal-1);
+  --ls-cloze-text-color: var(--sw-teal-2);
+  --ls-icon-color: var(--sw-fg-3);
+
+  /* ---------- Links, tags, refs ---------- */
+  --ls-link-text-color: var(--sw-teal-1);
+  --ls-link-text-hover-color: var(--sw-teal-2);
+  --ls-link-ref-text-color: var(--sw-teal-1);
+  --ls-link-ref-text-hover-color: var(--sw-teal-2);
+  --ls-tag-text-color: var(--sw-teal-1);
+  --ls-tag-text-hover-color: var(--sw-teal-2);
+  --ls-tag-background-color: rgba(94, 234, 212, 0.12);
+  --ls-block-ref-link-text-color: var(--sw-teal-3);
+  --ls-tag-text-opacity: 0.95;
+  --ls-tag-text-hover-opacity: 1;
+
+  /* ---------- Accent / active states ---------- */
+  --ls-active-primary-color: var(--sw-teal-1);
+  --ls-active-secondary-color: var(--sw-teal-2);
+  --ls-a-chosen-bg: rgba(94, 234, 212, 0.18);
+  --ls-focus-ring-color: var(--sw-teal-1);
+  --ls-button-background-color: var(--sw-teal-1);
+  --ls-button-background-hsl: 171, 77%, 64%;
+
+  /* ---------- Borders ---------- */
+  --ls-border-color: var(--sw-bg-3);
+  --ls-secondary-border-color: var(--sw-bg-4);
+  --ls-tertiary-border-color: var(--sw-bg-2);
+  --ls-guideline-color: var(--sw-bg-3);
+
+  /* ---------- Blocks / bullets ---------- */
+  --ls-block-highlight-color: rgba(94, 234, 212, 0.12);
+  --ls-block-bullet-color: var(--sw-pink);
+  --ls-block-bullet-border-color: rgba(251, 113, 133, 0.35);
+
+  /* ---------- Selection ---------- */
+  --ls-selection-background-color: rgba(94, 234, 212, 0.25);
+  --ls-selection-text-color: var(--sw-fg-0);
+
+  /* ---------- Scrollbar ---------- */
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-foreground-color: rgba(51, 65, 85, 0.55);
+  --ls-scrollbar-thumb-hover-color: rgba(94, 234, 212, 0.55);
+
+  /* ---------- Page checkboxes (TODO markers) ---------- */
+  --ls-page-checkbox-color: var(--sw-teal-1);
+  --ls-page-checkbox-border-color: var(--sw-bg-4);
+
+  /* ---------- Whiteboard ---------- */
+  --ls-wb-stroke-color-default: var(--sw-fg-2);
+  --ls-wb-background-color-default: transparent;
+  --ls-wb-text-color-default: var(--sw-fg-1);
+
+  /* ---------- Highlight palette (text highlights, tags) ---------- */
+  --ls-highlight-color-red: rgba(251, 113, 133, 0.30);
+  --ls-highlight-color-yellow: rgba(251, 191, 36, 0.30);
+  --ls-highlight-color-green: rgba(94, 234, 212, 0.25);
+  --ls-highlight-color-blue: rgba(56, 189, 248, 0.30);
+  --ls-highlight-color-purple: rgba(179, 136, 255, 0.30);
+  --ls-highlight-color-pink: rgba(251, 113, 133, 0.25);
+  --ls-highlight-color-gray: rgba(148, 163, 184, 0.25);
+}
+
+/* =============================================================
+ * Targeted rules
+ * ============================================================= */
+
+/* Headings: teal cascade (matches Obsidian + VSCode) */
+.ls-block :is(h1, h2, h3) {
+  color: var(--sw-teal-1);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.ls-block h4 {
+  color: var(--sw-teal-2);
+  font-weight: 600;
+}
+.ls-block h5 {
+  color: var(--sw-teal-3);
+  font-weight: 600;
+}
+.ls-block h6 {
+  color: var(--sw-purple);
+  font-weight: 600;
+}
+
+/* Bold / italic emphasis */
+.ls-block strong,
+.block-content strong {
+  color: var(--sw-fg-0);
+  font-weight: 700;
+}
+.ls-block em,
+.block-content em {
+  color: var(--sw-fg-2);
+}
+
+/* Bullets: pink markers, teal on hover of the owning block */
+.bullet {
+  background-color: var(--sw-pink) !important;
+}
+.bullet-container.dot .bullet {
+  background-color: var(--sw-pink);
+}
+.bullet-container:not(.dot) {
+  background-color: rgba(251, 113, 133, 0.18);
+}
+.bullet-container:not(.dot):hover {
+  background-color: rgba(251, 113, 133, 0.30);
+}
+
+/* Block selection / focus */
+.ls-block.selected,
+.block-content-wrapper.selected {
+  background: rgba(94, 234, 212, 0.14);
+  box-shadow: inset 2px 0 0 var(--sw-teal-1);
+}
+
+/* Inline code pill */
+code:not(.hljs):not([class*="language-"]) {
+  background: var(--sw-bg-2);
+  color: var(--sw-teal-2);
+  padding: 0.1em 0.4em;
+  border-radius: var(--ls-border-radius-low);
+  font-size: 0.9em;
+}
+
+/* Fenced code blocks */
+pre.CodeMirror-line,
+.CodeMirror,
+.extensions__code,
+pre code {
+  background: var(--sw-bg-2) !important;
+  color: var(--sw-fg-1);
+  border: 1px solid var(--sw-bg-3);
+  border-radius: var(--ls-border-radius-medium);
+}
+
+/* hljs token recolor — keep it Slatewave-flavoured */
+.hljs-comment, .hljs-quote { color: var(--sw-fg-4); font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link { color: var(--sw-sky); }
+.hljs-function, .hljs-title, .hljs-name { color: var(--sw-teal-3); }
+.hljs-string, .hljs-attr { color: var(--sw-teal-1); }
+.hljs-number, .hljs-symbol, .hljs-bullet, .hljs-deletion { color: var(--sw-pink); }
+.hljs-variable, .hljs-template-variable, .hljs-class { color: var(--sw-fg-2); }
+.hljs-type, .hljs-meta, .hljs-built_in { color: var(--sw-purple); }
+.hljs-tag, .hljs-selector-id, .hljs-selector-class { color: var(--sw-sky); }
+
+/* Page tags (hash prefix) */
+a.tag {
+  color: var(--sw-teal-1);
+  background: rgba(94, 234, 212, 0.10);
+  padding: 0 0.35em;
+  border-radius: var(--ls-border-radius-low);
+}
+a.tag:hover {
+  color: var(--sw-teal-2);
+  background: rgba(94, 234, 212, 0.20);
+}
+
+/* Page references [[...]] */
+.page-ref {
+  color: var(--sw-teal-1);
+  text-decoration: none;
+}
+.page-ref:hover {
+  color: var(--sw-teal-2);
+  text-decoration: underline;
+}
+
+/* Block references ((uuid)) */
+.block-ref {
+  border-bottom: 1px dashed rgba(125, 211, 252, 0.55);
+  color: var(--sw-teal-3);
+  opacity: 0.95;
+}
+.block-ref:hover {
+  border-bottom-color: var(--sw-teal-2);
+  color: var(--sw-teal-2);
+}
+
+/* External links */
+a[href^="http"]:not(.tag):not(.page-ref) {
+  color: var(--sw-sky);
+}
+a[href^="http"]:not(.tag):not(.page-ref):hover {
+  color: var(--sw-teal-3);
+  text-decoration: underline;
+}
+
+/* Unresolved page refs */
+.page-ref.is-empty,
+a.page-ref[data-ref]:not([href]) {
+  color: var(--sw-pink);
+}
+
+/* TODO / DOING / DONE markers */
+.form-checkbox {
+  border-color: var(--sw-bg-4);
+  background: var(--sw-bg-2);
+}
+.form-checkbox:checked {
+  background: var(--sw-teal-1);
+  border-color: var(--sw-teal-1);
+}
+.marker-switch,
+a.marker-switch {
+  color: var(--sw-teal-1);
+  font-weight: 600;
+  opacity: 0.9;
+}
+a.marker-switch[data-marker="TODO"] { color: var(--sw-pink); }
+a.marker-switch[data-marker="DOING"] { color: var(--sw-amber); }
+a.marker-switch[data-marker="DONE"] { color: var(--sw-teal-1); opacity: 0.6; }
+a.marker-switch[data-marker="WAITING"] { color: var(--sw-sky); }
+a.marker-switch[data-marker="CANCELED"],
+a.marker-switch[data-marker="CANCELLED"] { color: var(--sw-fg-4); }
+
+/* Priority tags */
+.priority { color: var(--sw-amber); }
+.priority[data-priority="A"] { color: var(--sw-pink); }
+.priority[data-priority="B"] { color: var(--sw-amber); }
+.priority[data-priority="C"] { color: var(--sw-sky); }
+
+/* Blockquote */
+.ls-block blockquote,
+blockquote {
+  border-left: 2px solid var(--sw-teal-1);
+  padding-left: 1em;
+  color: var(--sw-fg-1);
+  font-style: italic;
+  background: transparent;
+  margin-left: 0;
+}
+
+/* Tables */
+.ls-block table {
+  border-collapse: collapse;
+}
+.ls-block th,
+.ls-block td {
+  border: 1px solid var(--sw-bg-3);
+  padding: 0.4em 0.8em;
+}
+.ls-block thead th {
+  background: var(--sw-bg-1);
+  color: var(--sw-fg-0);
+  font-weight: 600;
+}
+.ls-block tbody tr:hover {
+  background: rgba(94, 234, 212, 0.04);
+}
+
+/* Horizontal rule */
+.ls-block hr,
+hr {
+  border: none;
+  border-top: 1px solid var(--sw-bg-3);
+}
+
+/* Left sidebar */
+#left-sidebar {
+  background: var(--sw-bg-1);
+  border-right: 1px solid var(--sw-bg-2);
+}
+#left-sidebar .nav-content-item {
+  color: var(--sw-fg-2);
+}
+#left-sidebar .nav-content-item .header {
+  color: var(--sw-fg-3);
+}
+#left-sidebar .favorite-item:hover,
+#left-sidebar .recent-item:hover,
+#left-sidebar a.item:hover {
+  color: var(--sw-teal-1);
+  background: rgba(94, 234, 212, 0.06);
+}
+
+/* Header bar */
+.cp__header {
+  background: var(--sw-bg-1);
+  border-bottom: 1px solid var(--sw-bg-2);
+}
+.cp__header .button:hover {
+  color: var(--sw-teal-1);
+}
+
+/* Right sidebar */
+.cp__right-sidebar .sidebar-item-header {
+  color: var(--sw-teal-1);
+  background: var(--sw-bg-2);
+}
+
+/* Page title */
+.page-title,
+h1.title {
+  color: var(--sw-fg-0);
+  font-weight: 700;
+}
+
+/* Current journal day indicator */
+.journal .foldable-title .title {
+  color: var(--sw-teal-1);
+}
+
+/* Command palette / quick search */
+.cp__palette {
+  background: var(--sw-bg-2);
+  border: 1px solid var(--sw-bg-3);
+}
+.cp__palette .chosen,
+.ui__modal-content .chosen,
+.search-results .chosen {
+  background: rgba(94, 234, 212, 0.18);
+  color: var(--sw-teal-1);
+  box-shadow: inset 2px 0 0 var(--sw-teal-1);
+}
+
+/* Modal / dialog */
+.ui__modal-panel,
+.ui__modal-content {
+  background: var(--sw-bg-2);
+  border: 1px solid var(--sw-bg-3);
+  border-radius: var(--ls-border-radius-medium);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Dropdown / popover menus */
+.menu-links-wrapper,
+.ui__dropdown-content {
+  background: var(--sw-bg-2);
+  border: 1px solid var(--sw-bg-3);
+}
+.menu-link:hover,
+.ui__dropdown-content > *:hover {
+  background: rgba(94, 234, 212, 0.10);
+  color: var(--sw-teal-1);
+}
+
+/* Input / form fields */
+input[type="text"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+  background: var(--sw-bg-2);
+  color: var(--sw-fg-1);
+  border: 1px solid var(--sw-bg-3);
+  border-radius: var(--ls-border-radius-low);
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--sw-teal-1);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(94, 234, 212, 0.25);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: var(--ls-scrollbar-width);
+  height: var(--ls-scrollbar-width);
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--ls-scrollbar-foreground-color);
+  border-radius: var(--ls-scrollbar-width);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ls-scrollbar-thumb-hover-color);
+}
+
+/* Selection highlight */
+::selection {
+  background: var(--ls-selection-background-color);
+  color: var(--sw-fg-0);
+}
+
+/* Cursor caret in edit mode */
+.editor-inner,
+textarea {
+  caret-color: var(--sw-teal-1);
+}
+
+/* Graph view (knowledge graph) */
+.cp__graph .graph-filter {
+  background: var(--sw-bg-2);
+  border: 1px solid var(--sw-bg-3);
+}
+
+/* Flashcards */
+.cards-review .cards-total {
+  color: var(--sw-teal-1);
+}
