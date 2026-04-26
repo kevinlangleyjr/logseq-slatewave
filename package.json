@@ -1,6 +1,6 @@
 {
   "name": "logseq-slatewave",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "description": "Dark slate + teal theme for Logseq, sharing its palette with the Slatewave VSCode, Obsidian, and oh-my-posh themes.",
   "main": "slatewave.css",
   "author": "Kevin Langley Jr",
