@@ -16,6 +16,12 @@ A dark [Logseq](https://logseq.com) theme on a slate foundation with a teal sign
 
 ---
 
+## Preview
+
+![A Logseq journal page rendered with Slatewave — slate editor, teal headings, pink list markers, side-by-side editing and reading views](docs/preview.png)
+
+---
+
 ## What it styles
 
 Slatewave is written against Logseq's `--ls-*` CSS variable API — no upstream theme dependencies. It tunes:
